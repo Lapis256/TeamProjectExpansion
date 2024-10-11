@@ -1,0 +1,37 @@
+[versions]
+plugin_mixin = "0.7.+"
+plugin_forge = "6.0.+"
+plugin_parchmentmc = "1.+"
+
+
+minecraft = "1.20.1"
+minecraftForge = "1.20.1-47.3.7"
+forge = "47.3.7"
+parchmentmc = "2023.09.03"
+mixin = "0.8.5"
+mixinExtras = "0.5.0-beta.3"
+
+jei = "15.12.3.55"
+ae2 = "15.2.13"
+projectE = "4901949"
+projectEx = "5772569"
+teamProjectE = "5402805"
+
+
+[libraries]
+minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
+minecraftForge = { module = "net.minecraftforge:forge", version.ref = "minecraftForge" }
+mixin = { module = "org.spongepowered:mixin", version.ref = "mixin" }
+mixinExtrasCommon = { module = "io.github.llamalad7:mixinextras-common", version.ref = "mixinExtras" }
+mixinExtrasForge = { module = "io.github.llamalad7:mixinextras-forge", version.ref = "mixinExtras" }
+
+jei = { module = "mezz.jei:jei-1.20.1-forge", version.ref = "jei" }
+projectE = { module = "curse.maven:projecte-226410", version.ref = "projectE" }
+projectEx = { module = "curse.maven:project-expansion-579177", version.ref = "projectEx" }
+teamProjectE = { module = "curse.maven:team-projecte-689273", version.ref = "teamProjectE" }
+
+
+[plugins]
+mixin = { id = "org.spongepowered.mixin", version.ref = "plugin_mixin" }
+forge = { id = "net.minecraftforge.gradle", version.ref = "plugin_forge" }
+parchmentmc = { id = "org.parchmentmc.librarian.forgegradle", version.ref = "plugin_parchmentmc" }

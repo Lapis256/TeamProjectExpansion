@@ -1,0 +1,20 @@
+{
+    "required": true,
+    "minVersion": "0.8",
+    "minMixinExtrasVersion": "0.5.0-beta.3",
+    "package": "io.github.lapis256.team_project_expansion.mixin",
+    "refmap": "${mod_id}.refmap.json",
+    "compatibilityLevel": "JAVA_17",
+    "injectors": {
+        "defaultRequire": 1
+    },
+    "mixins": [
+        "BlockEntityEMCLink\$FluidHandlerMixin",
+        "BlockEntityEMCLink\$ItemHandlerMixin",
+        "BlockEntityEMCLinkMixin",
+        "BlockEntityPowerFlowerMixin",
+        "PowerFlowerCollectorAccessor",
+        "PowerFlowerCollectorMixin",
+        "UtilMixin"
+    ]
+}
