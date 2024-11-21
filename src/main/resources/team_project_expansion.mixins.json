@@ -14,8 +14,10 @@
         "BlockEntityEMCLinkMixin",
         "BlockEntityPowerFlowerMixin",
         "ItemInfiniteFuelMixin",
+        "ItemMatterUpgraderMixin",
         "PowerFlowerCollectorAccessor",
         "PowerFlowerCollectorMixin",
+        "TeamKnowledgeProviderAccessor",
         "UtilMixin"
     ]
 }
