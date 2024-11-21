@@ -17,7 +17,7 @@ import java.util.UUID;
 @Mixin(value = ItemInfiniteFuel.class, remap = false)
 public class ItemInfiniteFuelMixin {
     @Inject(method = "getCraftingRemainingItem", at = @At(value = "INVOKE", target = "Lmoze_intel/projecte/api/capabilities/IKnowledgeProvider;setEmc(Ljava/math/BigInteger;)V", shift = At.Shift.AFTER))
-    private void team_project_expansion$syncEmc(CallbackInfoReturnable<ItemStack> cir, @Local IKnowledgeProvider provider, @Local UUID owner) {
+    private void team_project_expansion$getCraftingRemainingItemSyncEmc(CallbackInfoReturnable<ItemStack> cir, @Local IKnowledgeProvider provider, @Local UUID owner) {
         if (provider instanceof TeamKnowledgeProvider teamProvider) {
             TeamProjectExpansion.syncEmc(teamProvider, owner);
         }

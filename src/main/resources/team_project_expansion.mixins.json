@@ -12,12 +12,12 @@
         "BlockEntityEMCLink$FluidHandlerMixin",
         "BlockEntityEMCLink$ItemHandlerMixin",
         "BlockEntityEMCLinkMixin",
+        "BlockEntityOwnableMixin",
         "BlockEntityPowerFlowerMixin",
         "ItemInfiniteFuelMixin",
         "ItemMatterUpgraderMixin",
         "PowerFlowerCollectorAccessor",
         "PowerFlowerCollectorMixin",
-        "TeamKnowledgeProviderAccessor",
         "UtilMixin"
     ]
 }

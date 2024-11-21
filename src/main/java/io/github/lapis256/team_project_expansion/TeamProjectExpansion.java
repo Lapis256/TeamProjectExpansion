@@ -1,5 +1,6 @@
 package io.github.lapis256.team_project_expansion;
 
+import cn.leomc.teamprojecte.TPTeam;
 import cn.leomc.teamprojecte.TeamKnowledgeProvider;
 import cn.leomc.teamprojecte.TeamProjectE;
 import moze_intel.projecte.api.ItemInfo;
@@ -39,5 +40,10 @@ public class TeamProjectExpansion {
 
     public static void syncKnowledgeChange(@NotNull UUID uuid, ItemInfo change, boolean learned) {
         sendTeamPacket(new KnowledgeSyncChangePKT(change, learned), uuid);
+    }
+
+    public static boolean isTeamMember(UUID owner, UUID player) {
+        var team = TPTeam.getTeamByMember(owner);
+        return team != null && team.getAll().contains(player);
     }
 }
