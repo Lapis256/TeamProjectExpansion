@@ -9,13 +9,14 @@ minecraftForge = "1.20.1-47.3.7"
 forge = "47.3.7"
 parchmentmc = "2023.09.03"
 mixin = "0.8.5"
-mixinExtras = "0.5.0-beta.3"
+mixinExtras = "0.5.0-beta.4"
 
 jei = "15.12.3.55"
-ae2 = "15.2.13"
 projectE = "4901949"
 projectEx = "5772569"
 teamProjectE = "5402805"
+mekanism = "1.20.1-10.4.9.61"
+ae2 = "15.2.13"
 
 
 [libraries]
@@ -29,6 +30,8 @@ jei = { module = "mezz.jei:jei-1.20.1-forge", version.ref = "jei" }
 projectE = { module = "curse.maven:projecte-226410", version.ref = "projectE" }
 projectEx = { module = "curse.maven:project-expansion-579177", version.ref = "projectEx" }
 teamProjectE = { module = "curse.maven:team-projecte-689273", version.ref = "teamProjectE" }
+mekanism = { module = "mekanism:Mekanism", version.ref = "mekanism" }
+ae2 = { module = "appeng:appliedenergistics2-forge", version.ref = "ae2" }
 
 
 [plugins]

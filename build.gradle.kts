@@ -1,3 +1,4 @@
+import org.apache.tools.ant.filters.ReplaceTokens
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -104,7 +105,7 @@ repositories {
         url = uri("https://repo.spongepowered.org/repository/maven-public/")
     }
     maven {
-        name = "JEI / AE2"
+        name = "JEI / AE2 / Mekanism"
         url = uri("https://modmaven.dev/")
     }
     maven {
@@ -121,7 +122,8 @@ dependencies {
     implementation(deobf(libs.projectEx))
     implementation(deobf(libs.teamProjectE))
 
-    runtimeOnly(fg.deobf("curse.maven:mekanism-268560:5662583"))
+    runtimeOnly(deobf(libs.mekanism))
+    runtimeOnly(deobf(libs.ae2))
     runtimeOnly(deobf(libs.jei))
 
     annotationProcessor(variantOf(libs.mixin, "processor"))
@@ -183,7 +185,7 @@ tasks {
         )
 
         filesMatching(listOf("pack.mcmeta", "META-INF/mods.toml", "*.mixins.json")) {
-            expand(prop)
+            filter<ReplaceTokens>("beginToken" to "\${", "endToken" to "}", "tokens" to prop)
         }
         inputs.properties(prop)
     }
