@@ -8,7 +8,6 @@ import cool.furry.mc.forge.projectexpansion.block.entity.BlockEntityEMCLink;
 import io.github.lapis256.team_project_expansion.TeamProjectExpansion;
 import moze_intel.projecte.api.capabilities.IKnowledgeProvider;
 import net.minecraft.server.level.ServerPlayer;
-import org.spongepowered.asm.mixin.Debug;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -16,9 +15,9 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
 
-@Debug(export = true)
 @Mixin(targets = "cool.furry.mc.forge.projectexpansion.block.entity.BlockEntityEMCLink$FluidHandler", remap = false)
 public abstract class BlockEntityEMCLink$FluidHandlerMixin {
+    @SuppressWarnings("target")
     @Shadow
     @Final
     BlockEntityEMCLink this$0;
