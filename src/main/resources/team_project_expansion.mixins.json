@@ -19,6 +19,7 @@
         "ItemMatterUpgraderMixin",
         "PowerFlowerCollectorAccessor",
         "PowerFlowerCollectorMixin",
+        "TransmutationProxyImplMixin",
         "UtilMixin"
     ]
 }

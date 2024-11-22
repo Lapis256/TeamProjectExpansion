@@ -4,6 +4,8 @@ import cn.leomc.teamprojecte.TPTeam;
 import cn.leomc.teamprojecte.TeamKnowledgeProvider;
 import cn.leomc.teamprojecte.TeamProjectE;
 import moze_intel.projecte.api.ItemInfo;
+import moze_intel.projecte.api.capabilities.IKnowledgeProvider;
+import moze_intel.projecte.api.proxy.ITransmutationProxy;
 import moze_intel.projecte.network.PacketHandler;
 import moze_intel.projecte.network.packets.IPEPacket;
 import moze_intel.projecte.network.packets.to_client.knowledge.KnowledgeSyncChangePKT;
@@ -13,6 +15,7 @@ import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.network.NetworkConstants;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -45,5 +48,14 @@ public class TeamProjectExpansion {
     public static boolean isTeamMember(UUID owner, UUID player) {
         var team = TPTeam.getTeamByMember(owner);
         return team != null && team.getAll().contains(player);
+    }
+
+    @Nullable
+    public static IKnowledgeProvider getKnowledgeProvider(UUID uuid) {
+        try {
+            return ITransmutationProxy.INSTANCE.getKnowledgeProviderFor(uuid);
+        } catch (NullPointerException e) {
+            return null;
+        }
     }
 }
